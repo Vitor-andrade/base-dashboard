@@ -1,0 +1,47 @@
+.uploader {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.02);
+    cursor: pointer;
+    display: flex;
+    height: 150px;
+    justify-content: center;
+    outline: 3px dashed #ccc;
+    outline-offset: 5px;
+    position: relative;
+    width: 100%;
+    
+    input { 
+       display: none; 
+    }
+    
+    & img,
+    & .icon { 
+       pointer-events: none; 
+    }
+    
+    &, .icon {
+       transition: all 100ms ease-in;
+    }
+    
+    .icon {
+       color: #eee;
+       color: rgba(0, 0, 0, 0.2);
+       font-size: 5em;
+    }
+    
+    img {
+       left: 50%;
+       opacity: 0;
+       max-height: 100%;
+       max-width: 100%;
+       position: absolute;
+       top: 50%;
+       transition: all 300ms ease-in;
+       transform: translate(-50%, -50%);
+    //    z-index: -1;
+       
+       &.loaded {
+          opacity: 1;
+       }
+    }
+ }
